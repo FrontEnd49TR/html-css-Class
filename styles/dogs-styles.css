@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @font-face {
     font-family: lakeshore;
     src: url("fonts/Airstream-webfont.svg");
@@ -16,14 +17,24 @@ body{
     flex-direction: column;
     background-color:azure;
     margin: 0;
+=======
+body {
+   display: flex; 
+   flex-direction: column;
+   background-color: azure;
+>>>>>>> d0272de1094c762b933397861b1b17330e4d3bd2
 }
 .logo  {
 font-size: 2em;
 background-color: bisque;
 display: block;
 text-align: center;
+<<<<<<< HEAD
 font-family: lakeshore;
 text-transform: uppercase;
+=======
+
+>>>>>>> d0272de1094c762b933397861b1b17330e4d3bd2
 }
 .main-class {
     display: flex;
@@ -34,6 +45,7 @@ text-transform: uppercase;
 .details-container {
     display: flex;
     flex-direction: column;
+<<<<<<< HEAD
    align-items: center;
    /*margin-top: 2.5vh;*/
    margin-bottom: 10vh;
@@ -43,11 +55,24 @@ text-transform: uppercase;
     height: 70vw;
     border-radius: 25%;
 } 
+=======
+    align-items: center;
+    margin-top: 2.5vh;
+
+}
+.details-image {
+    width: 70vw;
+    height: 60vw;
+    border-radius: 25%;
+}
+>>>>>>> d0272de1094c762b933397861b1b17330e4d3bd2
 .details-title {
 display: block;
+
 }
 .thumbnails-list {
 list-style: none;
+<<<<<<< HEAD
 display: flex;
 flex-direction: row;
 flex-wrap: wrap;
@@ -68,11 +93,34 @@ padding: 0;
 width: var(--thumbnails-img-width);
 height: var(--thumbnails-img-heigth);
 display: block;
+=======
+display:flex;
+flex-direction: row;
+flex-wrap: wrap;
+max-height: 25vh;
+overflow-y: auto;
+justify-content: space-around;
+padding-left: 0;
+}
+.thumbnails-item {
+width: 20vw;
+height: 20vw;
+margin-top: 2.5vh;
+border: solid 1px black;
+border-radius: 25%;
+overflow: hidden;
+}
+.thumbnails-image {
+    width: 20vw;
+    height: 15vw;
+    display: block;
+>>>>>>> d0272de1094c762b933397861b1b17330e4d3bd2
 }
 .thumbnails-title {
     display: block; 
     text-align: center;
     height: 5vw;
+<<<<<<< HEAD
    background-color: beige;
 }
 .thumbnails-anchor {
@@ -95,5 +143,11 @@ display: block;
         height: 30vw;
       }
        
+=======
+    background-color: beige;
+}
+.thumbnails-anchor {
+   text-decoration: none;
+>>>>>>> d0272de1094c762b933397861b1b17330e4d3bd2
 }
 
