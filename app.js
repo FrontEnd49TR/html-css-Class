@@ -30,25 +30,13 @@
 //     console.log( " number is NaN");
 //   }
 
-let num10 = 123;
-let strNum10 ="" + num10;
+// let num10 = 123;
+// let strNum10 ="" + num10;
 
-let strNum16 = num10.toString(16);  // => 16 system
+// let strNum16 = num10.toString(16);  // => 16 system
 
 //conversion from Morse code to number
 // "."  => 0  / "-" => 1
-
-
-
-
-
-
-
-
-
-
-
-
 
 // function sumDigits(number) {
 //     // if(number < 0) {
@@ -89,3 +77,41 @@ let strNum16 = num10.toString(16);  // => 16 system
 //         return res;
 //     }
 //     console.log (sum(10,20))
+// **********************************************
+
+function getSymbol(digit) {
+    let codeA = 'a'.charCodeAt();
+    return digit < 10 ? digit : String.fromCharCode(codeA + digit - 10);
+
+    // if(digit > 9) {
+    //     digit = String.fromCharCode(codeA + digit - 10);   // only in JavaScript
+    // }
+    // return digit;  // in Java trouble with type data, than digit type int and type string
+}
+function fromNumberToString(number, base){
+    number = Math.abs(number);
+    let res ="";
+    do {
+        let digit = number % base;
+        let sym = getSymbol(digit);
+        res = sym + res;
+        number = Math.trunc(number / base);
+    }while (number != 0);
+    return res;
+}
+function getdigit(symbol) {
+    let codeA ='a'.charCodeAt();
+    let res = symbol < '9' ? +symbol : symbol.charCodeAt() - codeA + 10;
+    return res;
+}
+    function fromStringToNumber(string, base) {
+        string = string.toLowerCase();
+    let result = 0;
+    for (let i = 0; i < string.length; i++) {
+        let digit = getdigit(string[i]);
+        result = result * base + digit;
+    }
+    return result;
+}
+console.log(fromNumberToString(900550,36));
+console.log(fromStringToNumber("a",16));
