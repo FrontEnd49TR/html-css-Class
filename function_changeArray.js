@@ -11,3 +11,7 @@ function ulSurround(strings) {
 } 
 let ar =["123","abc","lmn"];
 console.log(`\n input : ${ar} output : ${ulSurround(ar)}\n`);
+
+// function count(array, element) {
+
+// }
