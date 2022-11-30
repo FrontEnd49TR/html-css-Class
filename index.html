@@ -1,34 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movies</title>
+    <link rel="stylesheet" href="styles/forms.css">
+    <title>FORMS</title>
 </head>
+
 <body>
-    <button onclick="show(0)">show section 1</button>
-    <button onclick="show(1)">show section 2</button>
-    <button onclick="show(2)">show section 3</button>
+    <form id="employee-form" onsubmit="onSubmit(event)" class="form-class">
 
-    <section hidden>
-    <ul class="movies-list">
+        <div class="two-inputs">
+            <input type="text" name="employee_name" placeholder="Enter employee name" required>
+            <input type="email" name="email" placeholder="Enter email" required>
+        </div>
 
-    </ul>
-    </section>
+        <div class="date-label">
+            <label>Enter birthdate  </label>
+            <input type="date" name="birthDate" placeholder="birthDate" required>
+        </div>
 
-    <section hidden>
-        <label>kukareku</label>
-    
-      
-    </section>
+        <div class="two-inputs">
+            <select name="department" required>
+                <option value hidden selected disabled>
+                    --Select Department--
+                </option>
+                <option value="QA">QA</option>
+                <option value="Development">Development</option>
+                <option value="Management">Management</option>
+                <option value="Audit">Audit</option>
+            </select>
+            <input type="number" name="salary" placeholder="Enter salary" onchange="onChange(event)" required>
+        </div>
 
-    <section hidden>
-           <label>section3</label>
-        
-          
-    </section>
-    
-    <script src="src/movies.js"></script>
+        <div class="buttons">
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </div>
+
+    </form>
+    <script src="src/forms.js"></script>
 </body>
+
 </html>
